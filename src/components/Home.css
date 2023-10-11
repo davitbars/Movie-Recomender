@@ -3,6 +3,7 @@
     flex-direction: row;
     width: 100%;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .movie-row::-webkit-scrollbar{

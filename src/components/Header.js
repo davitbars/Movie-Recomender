@@ -13,7 +13,7 @@ function Header() {
       <nav className="navigation">
         <ul className="nav-list">
           <li className="nav-item"><a href="/">Home</a></li>
-          <li className="nav-item"><a href="/movies">Movies</a></li>
+          <li className='nav-item'><a href='/picker'>Movie Picker</a></li>
           <li className="nav-item"><a href="/about">About</a></li>
           <li className="nav-item"><a href="/contact">Contact</a></li>
         </ul>

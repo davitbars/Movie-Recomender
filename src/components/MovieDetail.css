@@ -1,0 +1,28 @@
+/* MovieDetail.css */
+.star {
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.star.selected {
+    color: gold;
+}
+
+.movie-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.movie-title {
+    font-weight: 900;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.movie-info {
+    margin-left: 25px;
+}
+
+.movie-text {
+    font-size: 23px;
+}
