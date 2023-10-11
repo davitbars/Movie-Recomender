@@ -1,0 +1,22 @@
+.movie-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.movie-row::-webkit-scrollbar{
+    display: none;
+}
+
+.movie-row-poster {
+    height: 400px;
+    width: 270px;
+    margin-right: 10px;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.movie-row-poster:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}

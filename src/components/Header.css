@@ -1,0 +1,56 @@
+/* Header.css */
+
+/* Header container styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Branding styles */
+.branding {
+    margin-left: 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.slogan {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Navigation styles */
+.navigation {
+    margin-right: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #ff9900;
+}
