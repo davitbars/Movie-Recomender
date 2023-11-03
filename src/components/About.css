@@ -1,0 +1,47 @@
+/* Add your preferred font-family here */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.about {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about-section {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.about-subheading {
+    font-size: 24px;
+    text-align: center;
+    color: #121212;
+}
+
+.about-text {
+    font-size: 18px;
+    text-align: justify;
+    color: #121212;
+}
+
+/* Center "Vision" and "Thank You" sections */
+.about-vision,
+.about-thank-you {
+    grid-column: span 2;
+    text-align: center;
+    
+}

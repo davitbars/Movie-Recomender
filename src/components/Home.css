@@ -11,8 +11,8 @@
 }
 
 .movie-row-poster {
-    height: 400px;
-    width: 270px;
+    height: 300px;
+    width: 200px;
     margin-right: 10px;
     transition: transform 0.2s, filter 0.2s;
 }

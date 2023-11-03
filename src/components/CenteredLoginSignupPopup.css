@@ -1,0 +1,138 @@
+.centered-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.centered-popup {
+    position: relative;
+    /* Set to relative positioning */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+.popup-container {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+.box-title {
+    font-size: 1.8em;
+    margin: 0;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: white;
+    color: black;
+    text-align: left;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 1.5em;
+    border: 1px solid #faa805;
+    border-radius: 5px;
+    transition: border 0.2s;
+    color: black;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+.input-field:focus {
+    border: 1px solid #faa805;
+}
+
+.btn {
+    width: 100%;
+    background: linear-gradient(to right,
+            #faa805,
+            #d47f00);
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.switch {
+    background: linear-gradient(to right,
+            #faa805,
+            #d47f00);
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover,
+.btn.switch:hover {
+    background: linear-gradient(
+        to right,
+        #d47f00,
+        #faa805
+      ); 
+    }
+
+.btn+.btn {
+    margin-top: 15px;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.close-button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #faa805;
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+}

@@ -2,12 +2,13 @@
 
 /* Header container styles */
 .header {
-    background-color: #333;
+    background-color: transparent;
     color: #fff;
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #faa805;
 }
 
 /* Branding styles */
@@ -18,6 +19,7 @@
 .logo {
     font-size: 2rem;
     margin: 0;
+    color: #faa805;
 }
 
 .slogan {
@@ -34,10 +36,12 @@
     list-style: none;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 .nav-item {
     margin-right: 1rem;
+    font-size: larger;
 }
 
 .nav-item:last-child {
@@ -53,4 +57,24 @@
 
 .nav-item a:hover {
     color: #ff9900;
+}
+
+.login-button {
+    background-color: white;
+    color: #faa805;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #faa805;
+    color: white;
 }

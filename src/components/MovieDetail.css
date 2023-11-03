@@ -1,11 +1,15 @@
 /* MovieDetail.css */
 .star {
     cursor: pointer;
-    font-size: 28px;
+    font-size: 22px;
 }
 
 .star.selected {
     color: gold;
+}
+
+.rating span {
+    font-size: 22px;
 }
 
 .movie-detail {
@@ -14,15 +18,90 @@
 }
 
 .movie-title {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 30px;
     text-decoration: underline;
+    margin: 0;
+}
+
+.movie-tagline {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 10px;
 }
 
 .movie-info {
     margin-left: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-shadow: 0 0 10px 2px white;
+    border-radius: 5px;
 }
 
 .movie-text {
-    font-size: 23px;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+
+.poster {
+    height: 500px;
+    width: 340px;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    /* Align items to the bottom of the container */
+    gap: 10px;
+    margin: 10px 0;
+}
+
+
+.genre {
+    margin-top: 15px;
+}
+
+.recommendations {
+    width: 100%;
+    overflow-x: auto;
+    margin-left: 25px !important;
+}
+
+.movie-row-similar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Adjust the gap between movie posters */
+    justify-content: flex-start;
+    /* Start a new row when the container width is reached */
+}
+
+.movie-row-poster-similar {
+    height: 300px;
+    width: 200px;
+    margin-right: 10px;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.movie-row-poster-similar:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+.genre,
+.cast,
+.crew {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.genre span,
+.cast span,
+.crew span {
+    font-weight: 300;
 }
