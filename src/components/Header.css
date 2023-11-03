@@ -1,6 +1,3 @@
-/* Header.css */
-
-/* Header container styles */
 .header {
     background-color: transparent;
     color: #fff;
@@ -11,7 +8,6 @@
     border-bottom: 2px solid #faa805;
 }
 
-/* Branding styles */
 .branding {
     margin-left: 1rem;
 }
@@ -27,7 +23,6 @@
     margin: 0;
 }
 
-/* Navigation styles */
 .navigation {
     margin-right: 1rem;
 }

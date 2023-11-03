@@ -1,4 +1,3 @@
-/* Add your preferred font-family here */
 body {
     font-family: Arial, sans-serif;
 }
@@ -38,10 +37,9 @@ body {
     color: #121212;
 }
 
-/* Center "Vision" and "Thank You" sections */
 .about-vision,
 .about-thank-you {
     grid-column: span 2;
     text-align: center;
-    
+
 }

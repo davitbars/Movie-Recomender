@@ -109,12 +109,10 @@
 
 .btn:hover,
 .btn.switch:hover {
-    background: linear-gradient(
-        to right,
-        #d47f00,
-        #faa805
-      ); 
-    }
+    background: linear-gradient(to right,
+            #d47f00,
+            #faa805);
+}
 
 .btn+.btn {
     margin-top: 15px;

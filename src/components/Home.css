@@ -6,7 +6,7 @@
     overflow-y: hidden;
 }
 
-.movie-row::-webkit-scrollbar{
+.movie-row::-webkit-scrollbar {
     display: none;
 }
 
