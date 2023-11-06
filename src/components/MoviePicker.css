@@ -60,7 +60,7 @@
     width: 100%;
 }
 
-.btns button {
+.picker-btn {
     color: black;
     font-weight: 700;
     background-color: #faa805;
@@ -72,4 +72,8 @@
 
 .filler {
     flex-grow: 1;
+}
+
+.submit {
+    width: 100%;
 }
