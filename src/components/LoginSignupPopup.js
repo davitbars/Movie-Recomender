@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "../firebase";
 import "./CenteredLoginSignupPopup.css";
 
-const LoginSignupPopup = ({ onClose }) => {
+const LoginSignupPopup = ({ onClose, onUserChange }) => {
     const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -27,7 +27,10 @@ const LoginSignupPopup = ({ onClose }) => {
                 await createUserWithEmailAndPassword(auth, email, password);
                 alert("Account created successfully.");
             }
-            window.location.reload();
+
+            const currentUser = auth.currentUser;
+            onUserChange(currentUser); // Pass the currentUser to the parent component
+            onClose(onUserChange);
         } catch (error) {
             console.error("Authentication error:", error.message);
             alert("Authentication error. Check your credentials.");

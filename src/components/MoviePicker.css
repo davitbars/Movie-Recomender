@@ -1,40 +1,75 @@
-.movie-picker-container {
+/* MoviePicker.css */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
-.movie-box {
+.card {
+    background-color: #111;
     padding: 20px;
-    width: 60%;
-    text-align: center;
     border-radius: 10px;
-    margin: 10px;
+    box-shadow: 0 0 10px white;
+    width: 600px;
 }
 
 .question-box {
-    border: 2px solid #fff;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-box h2 {
     text-align: center;
-    border-radius: 10px;
-    margin: 10px;
+    margin-bottom: 20px;
 }
 
 .options {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    width: 100%;
 }
 
-.submit {
-    padding: 15px 40px;
+.options li {
+    flex-basis: 45%;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    padding: 5px;
+}
+
+
+.options li.selected {
+    border-color: #faa805;
+    /* Selected border color */
+}
+
+.options li:hover {
+    border-color: #ab7200;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btns button {
+    color: black;
+    font-weight: 700;
     background-color: #faa805;
-    color: white;
-    border-radius: 10px;
+    padding: 7px 15px;
+    border-radius: 40px;
     border: none;
-    font-size: 20px;
-    transition: background-color 0.3s;
+    box-shadow: 0 0 5px #faa805;
 }
 
-.submit:hover {
-    background-color: #d47f00;
+.filler {
+    flex-grow: 1;
 }
