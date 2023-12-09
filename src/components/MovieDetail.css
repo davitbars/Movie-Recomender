@@ -31,6 +31,23 @@
     margin-top: 10px;
 }
 
+.streaming-services {
+    width: 100%;
+    display: flex;
+}
+
+.logo-image {
+    height: 50px;
+    border-radius: 10px;
+}
+
+.logo-list {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
 .movie-info {
     margin-left: 25px;
     position: relative;

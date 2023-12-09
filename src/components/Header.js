@@ -50,7 +50,6 @@ function Header() {
           </button>
         </ul>
       </nav>
-
       <CenteredLoginSignupPopup isOpen={isPopupOpen} onClose={closePopup} user={user} onUserChange={handleUserChange} />
     </header>
   );

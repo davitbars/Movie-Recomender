@@ -1,4 +1,4 @@
-// To run the server stuff go to this path in the cmd: PS C:\Users\davit\OneDrive\Desktop\Movie Recomendations\FlaskAPI>
+// To run the server stuff go to this path in the cmd: PS C:\Users\davit\OneDrive\Desktop\Movie recommendations\FlaskAPI>
 // and then type "python app.py"
 
 import React from 'react';

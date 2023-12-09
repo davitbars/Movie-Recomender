@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./MovieDetail.css";
 
-const MovieRecommendations = ({ movieTitle }) => {
-  const [recommendations, setRecommendations] = useState([]);
+const Movierecommendations = ({ movieTitle }) => {
+  const [recommendations, setrecommendations] = useState([]);
 
   useEffect(() => {
-    const fetchRecommendations = async () => {
+    const fetchrecommendations = async () => {
       try {
         const response = await fetch(`http://127.0.0.1:5000/api/recommendations/${movieTitle}`);
 
         if (response.ok) {
           const data = await response.json();
           console.log('Response data:', data); // Log response data
-          setRecommendations(data.similar_movies);
+          setrecommendations(data.similar_movies);
         } else {
           console.error('Error fetching recommendations:', response.statusText);
         }
@@ -22,7 +22,7 @@ const MovieRecommendations = ({ movieTitle }) => {
       }
     };
   
-    fetchRecommendations();
+    fetchrecommendations();
   }, [movieTitle]);
   
 
@@ -44,4 +44,4 @@ const MovieRecommendations = ({ movieTitle }) => {
   );
 };
 
-export default MovieRecommendations;
+export default Movierecommendations;

@@ -19,7 +19,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-section">
-          <h2 className="about-subheading">Machine Learning for Personalized Recommendations</h2>
+          <h2 className="about-subheading">Machine Learning for Personalized recommendations</h2>
           <p className="about-text">
             My expertise extends to machine learning algorithms that power the recommendation system. Through in-depth analysis of user behavior and preferences, I've designed a system that delivers personalized movie recommendations. This sophisticated feature enhances the user's movie-watching experience by suggesting content that aligns perfectly with their unique interests.
           </p>

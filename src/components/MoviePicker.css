@@ -70,10 +70,41 @@
     box-shadow: 0 0 5px #faa805;
 }
 
+
+.picker-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.pic-title-info {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.title-link {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .filler {
     flex-grow: 1;
 }
 
 .submit {
     width: 100%;
+}
+
+.info-link {
+    color: white;
+    background-color: #faa805;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    max-width: 150px;
 }

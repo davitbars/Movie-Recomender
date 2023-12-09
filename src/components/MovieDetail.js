@@ -3,12 +3,37 @@ import { useParams } from 'react-router-dom';
 import { db } from '../firebase'; // Import your Firestore configuration
 import './MovieDetail.css'; // You can create a separate CSS file for this component
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import MovieRecommendations from './MovieRecomendations';
+import Movierecommendations from './Movierecommendations';
+import axios from 'axios';
 
 const MovieDetail = () => {
   const { movieTitle } = useParams(); // Access the movieTitle from the URL
   const [movie, setMovie] = useState(null);
   const [rating, setRating] = useState(0);
+  const [streamingInfo, setStreamingInfo] = useState(null);
+
+  const getStreamingInfo = async (movieTitle) => {
+    try {
+      const tmdbApiKey = '806e4d4586d8412825f2a102fa289b33'; // Replace with your TMDb API key
+      const tmdbApiUrl = `https://api.themoviedb.org/3/search/movie`;
+      const params = {
+        api_key: tmdbApiKey,
+        query: movieTitle,
+      };
+
+      const response = await axios.get(tmdbApiUrl, { params });
+      const movieId = response.data.results[0].id;
+
+      const streamingInfoUrl = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers`;
+      const streamingInfoResponse = await axios.get(streamingInfoUrl, { params });
+
+      // Adjust the logic here based on the structure of the TMDb API response
+      const streamingProviders = streamingInfoResponse.data.results.US;
+      setStreamingInfo(streamingProviders);
+    } catch (error) {
+      console.error('Error fetching streaming information:', error);
+    }
+  };
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -20,10 +45,10 @@ const MovieDetail = () => {
 
         querySnapshot.forEach((doc) => {
           const movieData = doc.data();
-          // console.log('Matching movie data:', movieData);
           setMovie(movieData);
         });
 
+        await getStreamingInfo(movieTitle);
       } catch (error) {
         console.error('Error fetching movie details:', error);
       }
@@ -32,7 +57,7 @@ const MovieDetail = () => {
     fetchMovieDetails();
   }, [movieTitle]);
 
-  if (!movie) {
+  if (!movie || !streamingInfo) {
     return <div>Loading...</div>;
   }
 
@@ -76,6 +101,25 @@ const MovieDetail = () => {
             <p className="rating movie-text">{(movie.vote_average / 8.5 * 5).toFixed(1)}<span>★</span></p>
             <p className="release-date movie-text">{movie.release_date}</p>
           </div>
+          <h3>Available on:</h3>
+          <div className='streaming-services'>
+            <div className='logo-list'>
+              {streamingInfo.buy.map((provider) => (
+                <a
+                  key={provider.provider_id}
+                  href={provider.link}  // You might need to adjust this based on the actual structure of your streamingInfo
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <img
+                    src={`https://image.tmdb.org/t/p/original${provider.logo_path}`}
+                    alt={provider.provider_name}
+                    className='logo-image'
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
           <p className="plot movie-text">{movie.overview}</p>
           <div className="metadata">
             <p className="genre movie-text">
@@ -95,7 +139,7 @@ const MovieDetail = () => {
           </div>
 
         </div>
-        <MovieRecommendations movieTitle={movie.title} />
+        <Movierecommendations movieTitle={movie.title} />
       </div>
     </div>
   );

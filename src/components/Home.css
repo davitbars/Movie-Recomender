@@ -1,7 +1,7 @@
 .movie-row {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: calc(100vw - 80px);
     overflow-x: scroll;
     overflow-y: hidden;
 }
